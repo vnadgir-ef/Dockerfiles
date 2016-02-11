@@ -1,6 +1,6 @@
 FROM oberthur/docker-alpine-java
 
-ENV M2_HOME=/usr/lib/mvn M2=$M2_HOME/bin PATH=$PATH:$M2_HOME:$M2
+ENV M2_HOME=/usr/lib/mvn M2=/usr/lib/mvn/bin PATH=$PATH:/usr/lib/mvn:/usr/lib/mvn/bin
 
 RUN apk add --update wget \
  && wget http://ftp.fau.de/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
